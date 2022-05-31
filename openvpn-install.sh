@@ -99,7 +99,7 @@ function initialCheck() {
 	fi
 	if ! tunAvailable; then
 		echo "TUN is not available"
-		#exit 1
+		exit 1
 	fi
 	checkOS
 }

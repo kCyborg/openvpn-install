@@ -1087,7 +1087,7 @@ function newClient() {
 			;;
 		2)
 			echo "⚠️ You will be asked for the client password below ⚠️"
-			./easyrsa build-client-full "$CLIENT"
+			./easyrsa --passout=file:/opt/password --passin=file:/opt/password build-client-full "$CLIENT"
 			;;
 		esac
 		echo "Client $CLIENT added."
